@@ -8,14 +8,14 @@ const app = express();
 const port = 3000
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
 let db, collection;
 
 //cors
-let allowedOrigins = ['http://localhost:3000', 'http://localhost:8080'];//port :8081
+let allowedOrigins = ['http://localhost:3000', 'http://localhost:5173'];
 let options = {
-    origin: allowedOrigins,
+    origin:  'http://localhost:5173',
     methods: ["GET", "POST", "PUT",'DELETE'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
